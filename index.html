@@ -1,81 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manideep Vaddi - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="media.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manideep Vaddi - Electrical Engineering Student</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-  <header>
-    <h1>Manideep Vaddi</h1>
-    <p>Email: manideepv285@gmail.com | Phone: 630-315-3400</p>
-    <a href="https://www.linkedin.com/in/manideep-vaddi-1a5275234" class="btn">LinkedIn</a>
-  </header>
-
-  <nav id="desktop-nav">
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <nav id="hamburger-nav">
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Passionate and results-driven Electrical Engineering student with a profound commitment to research and data analysis.
-      Holder of Google Data Analytics Professional Certificate and extensive experience in various technical skills.
-    </p>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <!-- Add your experience details here -->
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <!-- Add your project details here -->
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: manideepv285@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/manideep-vaddi-1a5275234">Manideep Vaddi</a></p>
-  </section>
-
-  <footer>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav id="desktop-nav">
+        <div class="logo">Manideep Vaddi</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <p>Copyright &copy; 2023 Manideep Vaddi. All Rights Reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <nav id="hamburger-nav">
+        <div class="logo">Manideep Vaddi</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="ideogram (4).jpeg" alt="Manideep Vaddi profile picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Manideep Vaddi</h1>
+            <p class="section__text__p2">Electrical Engineering Student</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('Manideep_vaddi_resume (12).pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <a href="https://www.linkedin.com/in/manideep-vaddi-1a5275234">
+                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon" />
+                </a>
+                <!-- Add your GitHub link here if you have one -->
+                <!-- <a href="https://github.com/yourusername">
+                    <img src="./assets/github.png" alt="GitHub icon" class="icon" />
+                </a> -->
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Objective</p>
+        <h1 class="title">Passionate and results-driven Electrical Engineering student with a profound commitment to research and data analysis.</h1>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h3>Education</h3>
+                    <p>B.Tech in Electrical and Electronics Engineering<br />Sir C R Reddy College of Engineering, Eluru, India<br />Graduated: April 2023</p>
+                </div>
+                <div class="details-container">
+                    <h3>Intermediate</h3>
+                    <p>MPC (Mathematics, Physics, Chemistry)<br />Narayana Junior College, Srikakulam, India<br />Graduated: May 2019</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>Seeking an Internship in Cloud Operations for the API Gateway team to leverage my analytical prowess, technical skills, and passion for data-driven decision-making.</p>
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Professional Experience</p>
+        <h1 class="title">Data Science and Business Analytics Intern</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <p>The Sparks Foundation, India<br />October 2022 – November 2022</p>
+                    <ul>
+                        <li>Conducted in-depth data analysis using Python, SQL, Snowflake, and SAP to identify valuable insights and trends.</li>
+                        <li>Proficiently managed and integrated large datasets from multiple sources, demonstrating data collection skills.</li>
+                        <li>Streamlined data processes with Salesforce Business Administration expertise.</li>
+                        <li>Presented data-driven insights effectively using Tableau and Power BI.</li>
+                        <li>Collaborated within a team to enhance data-driven decision-making.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Projects</p>
+        <h1 class="title">Solar Power Generation Monitoring System (MPPS Research Project)</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <p>July 2023 – Present</p>
+                    <ul>
+                        <li>Leading a research project focused on optimizing Solar Power Generation using Maximum Power Point Tracking (MPPT) algorithms.</li>
+                        <li>Developing real-time monitoring systems to maximize solar energy efficiency.</li>
+                        <li>Utilizing data analysis and predictive modeling to enhance solar panel performance and energy output.</li>
+                        <li>Promoting sustainable energy solutions for a greener future.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">Power Factor Correction Using Arduino (IoT Project)</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <p>December 2022 – May 2023</p>
+                    <ul>
+                        <li>Implemented real-time control operations and parameter calculations using Arduino Uno board and C programming.</li>
+                        <li>Enhanced energy efficiency through automated power factor correction.</li>
+                        <li>Leveraged AWS Cloud skills, including AWS API Gateway, for data storage and analysis.</li>
+                        <li>Demonstrated strong problem-solving abilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">Data-Driven Customer Engagement Enhancement Project using mock database</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <p>June 2023 – August 2023</p>
+                    <ul>
+                        <li>Analyzed customer behavior data to reduce churn rates and improve engagement.</li>
+                        <li>Developed automation scripts using SAP for personalized customer interactions.</li>
+                        <li>Applied OCI Infrastructure Associate skills for efficient data management.</li>
+                        <li>Presented actionable insights to drive business improvements.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Contact</p>
+        <h1 class="title">Contact Information</h1>
+        <div class="contact-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h3>Email</h3>
+                    <p>manideepv285@gmail.com</p>
+                </div>
+                <div class="details-container">
+                    <h3>Phone</h3>
+                    <p>630-315-3400</p>
+                </div>
+                <div class="details-container">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/manideep-vaddi-1a5275234">https://www.linkedin.com/in/manideep-vaddi-1a5275234</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Manideep Vaddi</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
