@@ -98,8 +98,8 @@
         </div>
     </section>
 
-   <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+  <!DOCTYPE html>
+<!-- Created By manideep -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -109,67 +109,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 </head>
 <body>
-    <!-- Data Science/Analyst Skills section -->
-    <section class="skills" id="data-science">
+    <!-- skills section start -->
+    <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">Data Science & Analyst Skills</h2>
+            <h2 class="title">My skills</h2>
             <div class="skills-content">
-                <canvas id="data-science-chart"></canvas>
+                <canvas id="skills-chart"></canvas>
             </div>
         </div>
     </section>
-
-    <!-- Software Engineer Skills section -->
-    <section class="skills" id="software-engineer">
-        <div class="max-width">
-            <h2 class="title">Software Engineer Skills</h2>
-            <div class="skills-content">
-                <canvas id="software-engineer-chart"></canvas>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Engineer Skills section -->
-    <section class="skills" id="data-engineer">
-        <div class="max-width">
-            <h2 class="title">Data Engineer Skills</h2>
-            <div class="skills-content">
-                <canvas id="data-engineer-chart"></canvas>
-            </div>
-        </div>
-    </section>
-
-    <!-- JavaScript to initialize the radar charts -->
+    <!-- JavaScript to initialize the radar chart -->
     <script>
-        // Common options for the radar charts
-        const commonOptions = {
-            responsive: true,
-            maintainAspectRatio: true,
-            scale: {
-                ticks: {
-                    beginAtZero: true,
-                    max: 10,
-                }
-            },
-        };
+        const ctx = document.getElementById('skills-chart').getContext('2d');
 
-        // Data for Data Science/Analyst Skills
-        const dataScienceData = {
-            labels: ['Data Analysis', 'Data Visualization', 'Python', 'SQL', 'Machine Learning', 'Statistical Analysis', 'Big Data Technologies', 'Tableau', 'Power BI', 'Git'],
+        const data = {
+            labels: ['Python', 'C/C++', 'mySQL', 'PySpark', 'MongoDB', 'AWS', 'Snowflake', 'Data Analysis', 'Data Visualization', 'Tableau', 'Power BI', 'Salesforce', 'Git'],
             datasets: [{
-                data: [9, 8, 9, 8, 7, 8, 7, 8, 8, 7],
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                pointBackgroundColor: 'rgba(75, 192, 192, 1)',
-                pointBorderColor: '#fff',
-            }]
-        };
-
-        // Data for Software Engineer Skills
-        const softwareEngineerData = {
-            labels: ['Java', 'C++', 'Python', 'JavaScript', 'Database Management', 'Web Development', 'Version Control (Git)', 'Algorithms', 'Data Structures', 'Problem Solving'],
-            datasets: [{
-                data: [9, 8, 8, 9, 8, 8, 8, 9, 8, 9],
+                data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], // Set the same value for all skills
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 pointBackgroundColor: 'rgba(255, 99, 132, 1)',
@@ -177,39 +133,22 @@
             }]
         };
 
-        // Data for Data Engineer Skills
-        const dataEngineerData = {
-            labels: ['SQL', 'ETL', 'Hadoop', 'Spark', 'Big Data Technologies', 'Data Warehousing', 'Database Management', 'Python', 'AWS (S3, EC2, RDS, Glue)', 'Data Modeling'],
-            datasets: [{
-                data: [8, 8, 8, 8, 7, 8, 8, 7, 7, 8],
-                backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                borderColor: 'rgba(255, 206, 86, 1)',
-                pointBackgroundColor: 'rgba(255, 206, 86, 1)',
-                pointBorderColor: '#fff',
-            }]
+        const options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            scale: {
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 10,
+                    stepSize: 1,
+                }
+            },
         };
 
-        // Create the Radar Charts
-        const ctxDataScience = document.getElementById('data-science-chart').getContext('2d');
-        const ctxSoftwareEngineer = document.getElementById('software-engineer-chart').getContext('2d');
-        const ctxDataEngineer = document.getElementById('data-engineer-chart').getContext('2d');
-
-        new Chart(ctxDataScience, {
+        const myRadarChart = new Chart(ctx, {
             type: 'radar',
-            data: dataScienceData,
-            options: commonOptions,
-        });
-
-        new Chart(ctxSoftwareEngineer, {
-            type: 'radar',
-            data: softwareEngineerData,
-            options: commonOptions,
-        });
-
-        new Chart(ctxDataEngineer, {
-            type: 'radar',
-            data: dataEngineerData,
-            options: commonOptions,
+            data: data,
+            options: options,
         });
     </script>
 </body>
