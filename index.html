@@ -98,7 +98,7 @@
         </div>
     </section>
 
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en">
 <head>
@@ -112,7 +112,7 @@
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My skills</h2>
+            <h2 class="title">My Data Science & Analyst Skills</h2>
             <div class="skills-content">
                 <canvas id="skills-chart"></canvas>
             </div>
@@ -123,12 +123,12 @@
         const ctx = document.getElementById('skills-chart').getContext('2d');
 
         const data = {
-            labels: ['Python', 'C/C++', 'mySQL', 'PySpark', 'MongoDB', 'AWS', 'Snowflake', 'Data Analysis', 'Data Visualization', 'Tableau', 'Power BI', 'Salesforce', 'Git'],
+            labels: ['Data Analysis', 'Data Visualization', 'Python', 'SQL', 'Machine Learning', 'Statistical Analysis', 'Big Data Technologies', 'Tableau', 'Power BI', 'Git'],
             datasets: [{
-                data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], // Set the same value for all skills
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                data: [9, 8, 9, 8, 7, 8, 7, 8, 8, 7], // Skill levels from 1 to 10
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                pointBackgroundColor: 'rgba(75, 192, 192, 1)',
                 pointBorderColor: '#fff',
             }]
         };
@@ -138,9 +138,8 @@
             maintainAspectRatio: true,
             scale: {
                 ticks: {
-                    suggestedMin: 0,
-                    suggestedMax: 10,
-                    stepSize: 1,
+                    beginAtZero: true,
+                    max: 10,
                 }
             },
         };
@@ -153,6 +152,7 @@
     </script>
 </body>
 </html>
+
 
    <!-- contact section start -->
 <section class="contact" id="contact">
