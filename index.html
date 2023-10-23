@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+<!-- Created By manideep -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -98,62 +98,61 @@
         </div>
     </section>
 
+    <!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
             <h2 class="title">My skills</h2>
             <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My technical skills and certifications.</div>
-                    <p>Fluent in Telugu and proficient in English. Certified in Google Data Analytics, Salesforce Business Administration, OCI Infrastructure Associate, and AWS cloud quest Cloud Practitioner.</p>
-                </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>Advanced Statistical Analysis</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Data Visualization (Tableau, Power BI)</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Programming (Python, R)</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Database Management (SQL)</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="line php"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Cloud Computing (AWS)</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="line mysql"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Programming (C/C++)</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="line mysql"></div>
-                    </div>
-                </div>
+                <canvas id="skills-chart"></canvas>
             </div>
         </div>
     </section>
+    <!-- JavaScript to initialize the radar chart -->
+    <script>
+        const ctx = document.getElementById('skills-chart').getContext('2d');
+
+        const data = {
+            labels: ['Python', 'C/C++', 'mySQL', 'PySpark', 'MongoDB', 'AWS', 'Snowflake', 'Data Analysis', 'Data Visualization', 'Tableau', 'Power BI', 'Salesforce', 'Git'],
+            datasets: [{
+                data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], // Set the same value for all skills
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                pointBorderColor: '#fff',
+            }]
+        };
+
+        const options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            scale: {
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 10,
+                    stepSize: 1,
+                }
+            },
+        };
+
+        const myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: data,
+            options: options,
+        });
+    </script>
+</body>
+</html>
 
    <!-- contact section start -->
 <section class="contact" id="contact">
